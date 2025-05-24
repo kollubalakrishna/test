@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Event Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+   <div class="header-container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+
+    <button class="toggle-btn" id="toggleBtn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li>
+          <a href="#">Services ▾</a>
+          <ul>
+            <li><a href="#">Service 1</a></li>
+            <li><a href="#">Service 2</a></li>
+            <li><a href="#">Service 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="book-btn">
+      <button>Book an Event</button>
+    </div>
+  </div>
+</header>
+
+<!--Hero Section-->
+<section class="Hero-Section">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="BrandB_Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-content">
+    <h1>Crafting Unforgettable Moments</h1>
+    <p>Your perfect event starts with us</p>
+    <a href="#" class="hero-btn">Book an Event</a>
+  </div>
+</section>
+<!--Hero section-->
+
+<!--About US -->
+<section class="About-Us">
+  <div class="about-us-container">
+    <div class="about-us-text">
+      <h2>About Us</h2>
+      <p>
+        We craft unforgettable events tailored to your dreams. From intimate gatherings to grand celebrations, we bring creativity, precision, and passion to every occasion. Our experienced team takes care of every detail—from concept to execution—so you can relax and enjoy every moment. With a personalized approach and a commitment to excellence, we ensure your event is not just beautiful, but truly memorable.
+      </p>
+      <button>Learn More</button>
+    </div>
+    <div class="about-us-image">
+      <img src="About Us.jpg" alt="About Us Image">
+    </div>
+  </div>
+</section>
+<!--About US -->
+
+
+<!--Services-->
+<section class="Services">
+  <div class="services-container">
+    <h2 class="services-title">Our Services</h2>
+    <p class="services-subtitle">Discover how we can make your event extraordinary</p>
+
+    <div class="services-row">
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Service 1">
+        <h3>Event Planning</h3>
+      </div>
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Service 2">
+        <h3>Venue Selection</h3>
+      </div>
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=400&q=80" alt="Service 3">
+        <h3>Catering & Decor</h3>
+      </div>
+    </div>
+
+    <div class="services-row">
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=400&q=80" alt="Service 4">
+        <h3>Entertainment</h3>
+      </div>
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Service 5">
+        <h3>Photography</h3>
+      </div>
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Service 6">
+        <h3>Event Coordination</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Services-->
+
+
+<!--Gallery-->
+<section class="gallery">
+  <div class="gallery-container">
+    <h2>Our Event Highlights</h2>
+    <p>Explore the magic we create through our services</p>
+
+    <div class="filter-btns">
+      <button class="active" onclick="filterGallery('all')">All</button>
+      <button onclick="filterGallery('wedding')">Wedding</button>
+      <button onclick="filterGallery('corporate')">Corporate</button>
+      <button onclick="filterGallery('birthday')">Birthday</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item wedding">
+        <img src="wedding.jpg" alt="Wedding 1">
+      </div>
+      <div class="gallery-item corporate">
+        <img src="corporate.jpg" alt="Corporate 1">
+      </div>
+      <div class="gallery-item birthday">
+        <img src="birthday.jpg" alt="Birthday 1">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="Wedding-1.jpg" alt="Wedding 2">
+      </div>
+      <div class="gallery-item corporate">
+        <img src="Corporate-1.jpg" alt="Corporate 2">
+      </div>
+      <div class="gallery-item birthday">
+        <img src="birthday-1.jpg" alt="Birthday 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Gallery-->
+
+
+<!--Testmonials-->
+<section class="testimonial">
+  <div class="testimonial-container">
+    <h2 class="testimonial-title">What Our Clients Say</h2>
+
+    <div class="testimonial-slider-wrapper">
+      <button class="testimonial-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-card">
+          <img src="user.png" alt="Client 1">
+          <p>"They made our event magical. Every detail was perfect!"</p>
+          <h4>— Priya Sharma</h4>
+        </div>
+        <div class="testimonial-card">
+          <img src="user.png" alt="Client 2">
+          <p>"Professional and passionate. Highly recommend them!"</p>
+          <h4>— Rakesh Mehta</h4>
+        </div>
+        <div class="testimonial-card">
+          <img src="user.png" alt="Client 3">
+          <p>"Best planning team I’ve worked with. Stress-free & beautiful!"</p>
+          <h4>— Neha Agarwal</h4>
+        </div>
+        <div class="testimonial-card">
+          <img src="user.png" alt="Client 4">
+          <p>"The event was flawless! Guests were amazed."</p>
+          <h4>— Ankit Verma</h4>
+        </div>
+        <div class="testimonial-card">
+          <img src="user.png" alt="Client 5">
+          <p>"Incredible service. Will hire them again for sure."</p>
+          <h4>— Meera Joshi</h4>
+        </div>
+      </div>
+
+      <button class="testimonial-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<!--Testimonials-->
+
+
+<!--Faq's-->
+<section class="FAQs">
+  <div class="faq-container">
+    <!-- Left: FAQ Section -->
+    <div class="faq-left">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-title">What services do you offer?<span class="symbol">+</span></button>
+          <div class="accordion-content">We offer wedding planning, corporate events, birthdays, and more.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">How far in advance should I book?<span class="symbol">+</span></button>
+          <div class="accordion-content">We recommend booking at least 1-2 months in advance.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">Do you offer customized packages?<span class="symbol">+</span></button>
+          <div class="accordion-content">Yes, we tailor packages based on your preferences and budget.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">What locations do you serve?<span class="symbol">+</span></button>
+          <div class="accordion-content">We serve across multiple cities and even destination events.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">Is a deposit required to book?<span class="symbol">+</span></button>
+          <div class="accordion-content">Yes, a deposit is needed to confirm the booking.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">Is a deposit required to book?<span class="symbol">+</span></button>
+          <div class="accordion-content">Yes, a deposit is needed to confirm the booking.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">Is a deposit required to book?<span class="symbol">+</span></button>
+          <div class="accordion-content">Yes, a deposit is needed to confirm the booking.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="faq-right">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email" required>
+        <select required>
+          <option value="">Select Service</option>
+          <option value="wedding">Wedding</option>
+          <option value="corporate">Corporate</option>
+          <option value="birthday">Birthday</option>
+          <option value="custom">Custom Event</option>
+        </select>
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button type="submit">Book Event</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!--FAQ'S-->
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column logo-section">
+      <img src="logo.png" alt="Logo">
+      <p>We plan and execute exceptional events that leave lasting impressions.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📍 123 Event Street, Hyderabad</p>
+      <p>📞 +91 7989814939</p>
+      <p>📧 info@krishna.com</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Newsletter</h3>
+      <p>Stay updated with our latest events.</p>
+      <form>
+        <input type="email" placeholder="Your Email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Best Event Planner. All rights reserved, Designed By Balakrishna</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
